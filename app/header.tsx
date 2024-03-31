@@ -48,7 +48,7 @@ function Header() {
   
           </div>
 
-          <div className='bg-purple-400 border justify-center inline-block custom:hidden w-[40px] mx-20'>
+          <div className='bg-purple-400 border justify-center inline-block custom:hidden w-[40px] mx-10'>
           <button onClick={toggleDropdown}><img src="burger.webp" alt="dropmenu"></img></button>
           </div>
 
