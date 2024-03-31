@@ -3,3 +3,48 @@
 @tailwind utilities;
 
 
+.nav-grid {
+    grid-template-columns: 2% 170px 3fr 1fr 20%;
+    gap: 0;
+  }
+  
+@media screen and (max-width: 993px) {
+    .nav-grid {
+      grid-template-columns: 1fr;
+      display:flex;
+      justify-content: space-between;
+    }
+}
+
+
+
+
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .dropdown {
+    display: none;
+  }
+  
+  .dropdown.active {
+    background-color: white;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    
+
+    display: grid;
+    grid-row: 5;
+    width: 100%;
+    animation: slideDown 0.5s ease-out forwards;
+  }

@@ -1,25 +1,44 @@
 'use client'
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from "./button";
 import Link from 'next/link'
 
 
 function Header() {
+  const [dropdownActive, setDropdownActive] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownActive(!dropdownActive);
+};
+
+useEffect(() => {
+  const checkWindowSize = () => {
+      if (window.innerWidth < 993) {
+          setDropdownActive(false);
+      }
+  };
+
+  window.addEventListener('resize', checkWindowSize);
+
+  // Cleanup function to remove the event listener
+  return () => window.removeEventListener('resize', checkWindowSize);
+}, []);
+
+
     return (
 
       <header className="sticky top-0 z-50">
-          <nav className='px-0 py-3 w-full bg-white grid items-center justify-between p-4' style={{ gridTemplateColumns: '2% 12.5% 3fr 1fr 20%', gap: '0' }}>
+          <nav className='px-0 py-3 w-full grid bg-white items-center justify-between p-4 nav-grid'>
           
-          <div className='bg-purple-400 border flex justify-center'>
+          <div className= 'bg-purple-400 border justify-center hidden custom:flex'>
           
           </div>
   
-          <div className='bg-purple-400 border flex justify-center'>
+          <div className='bg-purple-400 border flex justify-center w-[170px] mx-10 custom:mx-0'>
           <Link href="../"><img src="image.png" alt="logo"></img></Link>
           </div>
   
           
-          <div className="flex justify-between items-center bg-yellow-400 border">
+          <div className="justify-between items-center bg-yellow-400 border hidden custom:flex">
             <div></div>
             
             <Link href="./About"><Button text='About' ></Button></Link>
@@ -34,13 +53,30 @@ function Header() {
   
     
   
-          <div className='bg-purple-400 border'>
+          <div className='bg-purple-400 border hidden custom:flex'>
           <a target="_blank" href="https://www.facebook.com/groups/342258320002/"><button className='font-bold p-4 rounded-xl bg-[#1877f2] text-white justify-start' id="facebook_button">Join our facebook</button></a>
-  
+          
+        
   
           </div>
 
+          <div className='bg-purple-400 border justify-center inline-block custom:hidden w-[50px] mx-10'>
+          <button onClick={toggleDropdown}><img src="burger.webp" alt="dropmenu"></img></button>
+          </div>
+
           
+      </nav>
+
+      <nav className={`dropdown ${dropdownActive ? 'active' : ''}`}>
+        <Link href="./About"><Button text='About' ></Button></Link>
+        <Link href="./Event"><Button text='Event' ></Button></Link>
+        <Link href="./Sponsorships"><Button text='Sponsorships'></Button></Link>
+        <Link href="./Memberships"><Button text='Memberships'></Button></Link>
+        <div className='bg-purple-400 border flex custom:hidden'>
+          <a target="_blank" href="https://www.facebook.com/groups/342258320002/"><button className='font-bold p-4 rounded-xl bg-[#1877f2] text-white justify-start' id="facebook_button">Join our facebook</button></a>
+          
+      
+          </div>
       </nav>
       </header>
     );

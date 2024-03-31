@@ -1,7 +1,7 @@
 function Footer() {
     return (
-      <div className="w-full mt-auto bg-slate-500 h-[20vh] font-bold">
-         <div className='px-0 py-5 inset-x-0 top-0 z-50 grid items-center justify-between p-4 w-9/12 mx-auto' style={{ gridTemplateColumns: '1fr 1fr 1fr', gap: '0' }}>
+      <div className="w-full mt-auto bg-slate-500 h-auto font-bold">
+         <div className='px-0 py-5 inset-x-0 top-0 z-50 grid items-center justify-between p-4 w-9/12 mx-auto grid-col-2 footer:grid-cols-3'>
           
           <div className='bg-purple-400 border text-left'>
             <h3>Murdoch badminton club
