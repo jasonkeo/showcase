@@ -97,7 +97,7 @@ export default function Home() {
             Our club welcomes students and non-students passionate about badminton.
             <br></br><br></br>
             Whether seasoned or beginner, we offer events and services for all.
-            From friendly matches to competitive tournaments, there's something for everyone.
+            From friendly matches to competitive tournaments, there&apos;s something for everyone.
             <br></br><br></br>
             Membership is open to all, regardless of student status.
             Our committee members are always available to assist, often found on campus. 
