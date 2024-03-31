@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import "./globals.css";
 
-function Button({text}) {
+function Button({text}: {text:any}) {
   const spanRef = useRef(null);
 
   return (
