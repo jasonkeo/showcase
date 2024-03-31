@@ -57,7 +57,7 @@ function Footer() {
           <div className='bg-purple-400 border text-left'>
           <h3> Enquiries <br></br>youremail@gmail.com</h3>
           <br></br>
-          <p>© themubc 2024<br></br>made by <a className="underline text-black-700" href="https://github.com/jasonkeo">jasonkeo</a></p>
+          <p>© themubc 2024<br></br>made by <a className="underline text-black-700" target='_blank' href="https://github.com/jasonkeo">jasonkeo</a></p>
           </div>
   
         </div>

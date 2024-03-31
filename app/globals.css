@@ -31,9 +31,12 @@
     }
   }
   
+
   .dropdown {
     display: none;
   }
+
+  
   
   .dropdown.active {
     background-color: white;
@@ -47,4 +50,13 @@
     grid-row: 5;
     width: 100%;
     animation: slideDown 0.5s ease-out forwards;
+  }
+
+ 
+  
+  @media (max-width: 992px) {
+    .dropdown {
+      display: none;
+    }
+    
   }

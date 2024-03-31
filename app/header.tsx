@@ -1,5 +1,5 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Button from "./button";
 import Link from 'next/link'
 
@@ -10,18 +10,6 @@ function Header() {
     setDropdownActive(!dropdownActive);
 };
 
-useEffect(() => {
-  const checkWindowSize = () => {
-      if (window.innerWidth < 993) {
-          setDropdownActive(false);
-      }
-  };
-
-  window.addEventListener('resize', checkWindowSize);
-
-  // Cleanup function to remove the event listener
-  return () => window.removeEventListener('resize', checkWindowSize);
-}, []);
 
 
     return (
@@ -68,10 +56,10 @@ useEffect(() => {
       </nav>
 
       <nav className={`dropdown ${dropdownActive ? 'active' : ''}`}>
-        <Link href="./About"><Button text='About' ></Button></Link>
-        <Link href="./Event"><Button text='Event' ></Button></Link>
-        <Link href="./Sponsorships"><Button text='Sponsorships'></Button></Link>
-        <Link href="./Memberships"><Button text='Memberships'></Button></Link>
+        <Link href="./About" onClick={toggleDropdown} className='flex custom:hidden'><Button text='About'></Button></Link>
+        <Link href="./Event" onClick={toggleDropdown} className='flex custom:hidden'><Button text='Event' ></Button></Link>
+        <Link href="./Sponsorships" onClick={toggleDropdown} className='flex custom:hidden'><Button text='Sponsorships'></Button></Link>
+        <Link href="./Memberships" onClick={toggleDropdown} className='flex custom:hidden'><Button text='Memberships'></Button></Link>
         <div className='bg-purple-400 border flex custom:hidden'>
           <a target="_blank" href="https://www.facebook.com/groups/342258320002/"><button className='font-bold p-4 rounded-xl bg-[#1877f2] text-white justify-start' id="facebook_button">Join our facebook</button></a>
           

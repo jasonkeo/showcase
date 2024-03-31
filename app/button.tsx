@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import "./globals.css";
 
 function Button({text}: {text:any}) {
-  /*const spanRef = useRef(null);*/
+  
   const spanRef = useRef<HTMLSpanElement | null>(null);
 
   return (
@@ -47,3 +47,4 @@ function Button({text}: {text:any}) {
 }
 
 export default Button;
+
