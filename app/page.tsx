@@ -6,9 +6,9 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <main className="flex-grow grid grid-cols-1 custom:grid-cols-2 gap-4 border-4 border-black-900 w-full custom:w-9/12 mx-auto">
-      <div className="w-full h-[90vh] bg-blue-500 flex items-center justify-center">
-        <div className="w-60/100 bg-yellow-500 text-center">
+    <main className="flex-grow grid grid-cols-1 custom:grid-cols-2 gap-4 w-full custom:w-9/12 mx-auto">
+      <div className="w-full h-[90vh]  flex items-center justify-center">
+        <div className="w-60/100 text-center">
           <h1 className='text-4xl md:text-7xl font-bold'> Join our Social <br></br> Sessions!</h1>
           <br></br>
           <p>Every Saturday  (10:00am-1:00pm) and <br></br>Wednesday(7:00pm to 9:30pm).</p>
@@ -16,15 +16,17 @@ export default function Home() {
           <button className='bg-red-500 p-4 text-white'>Register Now</button>
         </div>
       </div>
-      <div className="w-full h-[90vh] bg-red-500 flex items-center justify-center"> 
+
+      <div className="w-full h-[90vh] flex items-center justify-center"> 
         <ImageSlider></ImageSlider>
       </div>
-      <div className="w-full h-[60vh] bg-green-500 flex items-center justify-center">
-        <div className="w-4/5 h-4/5 bg-yellow-500 text-center rounded-lg bg-cover" style={{ backgroundImage: `url(${'/group.jpg'})` , backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+      
+      <div className="w-full h-[60vh]  flex items-center justify-center">
+        <div className="w-4/5 h-4/5  text-center rounded-lg bg-cover" style={{ backgroundImage: `url(${'/group.jpg'})` , backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
         </div>
       </div>
-      <div className="w-full bg-purple-500 flex items-center justify-center h-[60vh]">
-        <div className="w-4/5 bg-yellow-500 text-center">
+      <div className="w-full  flex items-center justify-center h-[60vh]">
+        <div className="w-4/5  text-center">
           <h1 className='text-2xl md:text-4xl font-bold text-center'> Who are we?</h1>
           <br></br>
           <p className='text-center'>

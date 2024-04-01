@@ -19,7 +19,7 @@ const ImageSlider: React.FC = () => {
 
     // Step 5: Display the current image and buttons to manually change the current image
     return (
-        <div className="w-4/5 h-3/5 bg-yellow-500 text-center rounded-lg bg-cover" style={{ backgroundImage: `url(${images[current]})`, backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+        <div className="w-4/5 h-3/5 text-center rounded-lg bg-cover" style={{ backgroundImage: `url(${images[current]})`, backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
         </div>
     );
         

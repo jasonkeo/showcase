@@ -1,9 +1,9 @@
 function Footer() {
     return (
-      <div className="w-full mt-auto bg-slate-500 h-auto font-bold">
+      <div className="w-full mt-auto bg-slate-300 h-auto font-bold">
          <div className='px-0 py-5 inset-x-0 top-0 z-50 grid items-center justify-between p-4 w-9/12 mx-auto grid-col-2 footer:grid-cols-3'>
           
-          <div className='bg-purple-400 border text-left'>
+          <div className='text-left'>
             <h3>Murdoch badminton club
             <br></br><br></br>Sporting arena
             <br></br>Murdoch University
@@ -11,7 +11,7 @@ function Footer() {
           </div>
   
           
-            <div className="justify-start bg-yellow-400 border grid grid-rows-2">
+            <div className="justify-start grid grid-rows-2">
                   
               <div className='flex justify-center'>
   
@@ -44,7 +44,7 @@ function Footer() {
               </div>
   
                   
-                  <div className='bg-purple-400 border flex justify-center'>
+                  <div className='flex justify-center'>
                   <a target="_blank" href="https://www.murdochguild.com.au/"><img className="h-10" src="guild.png" alt="logo"></img></a>
                   </div>
   
@@ -54,7 +54,7 @@ function Footer() {
          
   
   
-          <div className='bg-purple-400 border text-left'>
+          <div className='text-left'>
           <h3> Enquiries <br></br>youremail@gmail.com</h3>
           <br></br>
           <p>© themubc 2024<br></br>made by <a className="underline text-black-700" target='_blank' href="https://github.com/jasonkeo">jasonkeo</a></p>
